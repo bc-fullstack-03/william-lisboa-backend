@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  myapp:
+    image: will763/parrot:1.0.0
+    container_name: myapp
+    networks:
+      mynet:
+        ipv4_address: 10.5.0.7
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+      - localstack
+
+  mongodb:
+    image: mongo:latest
+    container_name: 'mongodb'
+    restart: always
+    networks:
+      mynet:
+        ipv4_address: 10.5.0.6
+    ports:
+      - "27017:27017"
+
+  localstack:
+    container_name: localstack
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"
+    environment:
+      - DEBUG=1
+      - SERVICES=s3
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    networks:
+      mynet:
+        ipv4_address: 10.5.0.5
+    volumes:
+      - ${TEMPDIR:-/tmp/localstack}:/tmp/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  mynet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/9
+          gateway: 10.5.0.1
