@@ -19,15 +19,15 @@ This will start all the necessary services for the application.
 
 The application will be running the api locally, enter http://localhost:8080/swagger-ui/index.html and see the swaggwer documentation.
 
-![Screenshot from 2023-05-09 17-24-23](https://github.com/terrar122/1233332424/assets/133050123/0ad54e3a-85a9-4077-b18f-065c2c8d373e)
+![Screenshot from 2023-05-09 17-24-23](https://github.com/bc-fullstack-03/william-lisboa-backend/assets/66382974/17bbc946-2795-4a8a-8dd0-7c1d7eebf625)
 
 ## :warning: Notice
 After registering the user and logging in, you will need to set Token and userId in the headers for some routes.
 #### Postman Headers
 
-![Screenshot from 2023-05-09 15-20-38](https://github.com/terrar122/1233332424/assets/133050123/617d80d5-46a8-4a23-bb54-d3d44933dacc)
+![Screenshot from 2023-05-09 15-20-38](https://github.com/bc-fullstack-03/william-lisboa-backend/assets/66382974/d5a00e82-4642-4593-b20c-153a2e09fcaf)
 
-![Screenshot from 2023-05-09 15-08-16](https://github.com/terrar122/1233332424/assets/133050123/e006941e-dece-4acb-87cf-404a4dbd76d5)
+![Screenshot from 2023-05-09 15-08-16](https://github.com/bc-fullstack-03/william-lisboa-backend/assets/66382974/f596324b-a7b6-493a-84cd-bae28b4d7da0)
 
 If you encounter any problems, please contact me or check the source code.
 
